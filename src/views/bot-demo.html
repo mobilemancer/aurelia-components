@@ -1,3 +1,5 @@
 <template>
-    <iframe src.bind="'https://webchat.botframework.com/embed/' + botName + '?s=' + secret"></iframe>
+    <require from="./../elements/qa-bot.html"></require>
+    <qa-bot boturl="botName" secret="secret"></qa-bot>
+    <!--<iframe src.bind="'https://webchat.botframework.com/embed/' + botName + '?s=' + secret"></iframe>-->
 </template>
