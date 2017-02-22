@@ -1,10 +1,12 @@
 import { bindable } from 'aurelia-framework';
 
 export class QaBot {
-  @bindable value;
+  @bindable name;
+  @bindable secret;
 
-  valueChanged(newValue, oldValue) {
-
+  private get url() {
+    return 'https://webchat.botframework.com/embed/' + this.name + '\\?s=' + this.secret;
   }
+
 }
 
