@@ -8,8 +8,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "aurelia-bootstrapper": "^1.0.0",
+    "@types/whatwg-fetch": "0.0.33",
     "aurelia-animator-css": "^1.0.0",
+    "aurelia-bootstrapper": "^1.0.0",
+    "aurelia-fetch-client": "^1.1.1",
     "bluebird": "^3.4.1",
     "requirejs": "^2.3.2",
     "text": "github:requirejs/text#latest"

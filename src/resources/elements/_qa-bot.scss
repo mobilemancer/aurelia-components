@@ -1,0 +1,51 @@
+qa-bot {
+  .chat-window {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid darkolivegreen;
+    color: white;
+
+    ul {
+      border: none;
+      padding: 0px;
+    }
+
+    li {
+      padding: 0.5rem;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .question {
+      border-top-left-radius: 0px;
+      //   box-shadow: -1px 2px 0px #c1cbcd;
+
+      .message {
+        background-color: seagreen;
+      }
+    }
+
+    .answer {
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .answer {
+      border-bottom-right-radius: 0px;
+      //   box-shadow: 1px 2px 0px #c1cbcd;
+
+      .message {
+        background-color: darkslateblue;
+      }
+    }
+
+    .message {
+      //   background: #eef8ff;
+      min-width: 50px;
+      max-width: 300px;
+      padding: 10px;
+      word-break: none;
+    }
+  }
+}

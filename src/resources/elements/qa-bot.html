@@ -1,6 +1,16 @@
 <template bindable="name, secret">
-  <!--<iframe src.bind="url"></iframe>-->
-  <!--<iframe src.bind="'https://webchat.botframework.com/embed/' + name + '?s=' + secret"></iframe>-->
-  <iframe src='https://webchat.botframework.com/embed/droid-worx-bot?s=QBuOcNrjjMc.cwA.16s.vR3iRE4E1DFbwEEmJLh5boGsHDCfgReUJbPV1g_37yc'></iframe>
+  <div>
+    <input type="text" value.bind="question" keypress.delegate="keyPressed($event)"></input>
+    <button click.delegate="send()">Ask</button>
+  </div>
 
+  <div class="chat-window">
+    <ul>
+      <li repeat.for="expression of expressions" class="${expression.type}">
+        <div class="message">
+          ${expression.text}
+        </div>
+      </li>
+    </ul>
+  </div>
 </template>
