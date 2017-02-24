@@ -1,16 +1,15 @@
-<template bindable="name, secret">
-  <div>
-    <input type="text" value.bind="question" keypress.delegate="keyPressed($event)"></input>
-    <button click.delegate="send()">Ask</button>
-  </div>
+<template>
 
-  <div class="chat-window">
+  <div class="chat-area" ref="chatArea" scrollheight.bind="scrollChatArea()">
     <ul>
       <li repeat.for="expression of expressions" class="${expression.type}">
-        <div class="message">
-          ${expression.text}
-        </div>
+        <div class="message" innerhtml.bind="expression.text"></div>
       </li>
     </ul>
   </div>
+
+  <div>
+    <input class="question-box" type="text" placeholder="Ask a question..." value.bind="question" keypress.delegate="keyPressed($event)"></input>
+  </div>
+
 </template>

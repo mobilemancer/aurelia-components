@@ -1,5 +1,5 @@
 qa-bot {
-  .chat-window {
+  .chat-area {
     width: 400px;
     height: 400px;
     background-color: white;
@@ -43,11 +43,19 @@ qa-bot {
     }
 
     .message {
-      //   background: #eef8ff;
       min-width: 50px;
       max-width: 300px;
       padding: 10px;
       word-break: none;
     }
+  }
+
+  .question-box {
+    width: 382px;
+  }
+
+  input {
+    line-height: 24px;
+    padding: 8px;
   }
 }
