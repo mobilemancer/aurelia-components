@@ -5,6 +5,8 @@ qa-bot {
     background-color: white;
     border: 1px solid darkolivegreen;
     color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     ul {
       border: none;
@@ -19,9 +21,9 @@ qa-bot {
 
     .question {
       border-top-left-radius: 0px;
-      //   box-shadow: -1px 2px 0px #c1cbcd;
 
       .message {
+        box-shadow: 3px 3px 3px black;
         background-color: seagreen;
       }
     }
@@ -33,9 +35,9 @@ qa-bot {
 
     .answer {
       border-bottom-right-radius: 0px;
-      //   box-shadow: 1px 2px 0px #c1cbcd;
 
       .message {
+        box-shadow: 3px 3px 3px black;
         background-color: darkslateblue;
       }
     }
