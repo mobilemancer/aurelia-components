@@ -3,6 +3,8 @@ import { HttpClient, json } from 'aurelia-fetch-client';
 import { BindingEngine } from 'aurelia-binding';
 
 const SUBSCRIPTION_KEY = "39931b6971294fa398c52c54889c4136";
+const QNA_ADDRESS = "/knowledgebases/905f81b1-af8d-4276-8194-8bf0f22ef8b2/generateAnswer";
+const ENTER_KEY = 13;
 
 @autoinject
 export class QaBot {
@@ -24,7 +26,7 @@ export class QaBot {
   }
 
   private keyPressed(event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode === ENTER_KEY) {
       this.send();
     }
     return true;
@@ -46,13 +48,11 @@ export class QaBot {
 
     this.expressions.push({ text: this.question, score: 100, type: "question" });
 
-    this.http.fetch("/knowledgebases/905f81b1-af8d-4276-8194-8bf0f22ef8b2/generateAnswer", request)
+    this.http.fetch(QNA_ADDRESS, request)
       .then(response => response.json())
       .then((data: any) => {
         this.expressions.push({ text: data.answer, score: data.score, type: "answer" });
-
         this.clearQuestionField();
-        // this.scrollChatArea();
       });
   }
 

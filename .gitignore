@@ -253,3 +253,4 @@ paket-files/
 wwwroot/scripts/app-bundle.js
 wwwroot/scripts/vendor-bundle.js
 wwwroot/scripts/app-bundle.js.map
+.vscode/symbols.json
