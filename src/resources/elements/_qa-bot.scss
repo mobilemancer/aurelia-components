@@ -1,7 +1,14 @@
 qa-bot {
+  $component-height: 400px;
+  $component-width: 400px;
+  $question-color: seagreen;
+  $answer-color: darkslateblue;
+  $box-shadow-color: black;
+  $default-spacing: 8px;
+
   .chat-area {
-    width: 400px;
-    height: 400px;
+    width: $component-width;
+    height: $component-height;
     background-color: white;
     border: 1px solid darkolivegreen;
     color: white;
@@ -14,48 +21,41 @@ qa-bot {
     }
 
     li {
-      padding: 0.5rem;
+      padding: $default-spacing;
       overflow: hidden;
       display: flex;
     }
 
-    .question {
-      border-top-left-radius: 0px;
+    .message {
+      box-shadow: $default-spacing / 2 $default-spacing / 2 $default-spacing / 2 $box-shadow-color;
+      min-width: 0.15 * $component-width;
+      max-width: 0.75 * $component-width;
+      padding: $default-spacing;
+      word-break: none;
+    }
 
+    .question {
       .message {
-        box-shadow: 3px 3px 3px black;
-        background-color: seagreen;
+        background-color: $question-color;
       }
     }
 
     .answer {
       justify-content: flex-end;
       align-items: flex-end;
-    }
-
-    .answer {
-      border-bottom-right-radius: 0px;
 
       .message {
-        box-shadow: 3px 3px 3px black;
-        background-color: darkslateblue;
+        background-color: $answer-color;
       }
-    }
-
-    .message {
-      min-width: 50px;
-      max-width: 300px;
-      padding: 10px;
-      word-break: none;
     }
   }
 
   .question-box {
-    width: 382px;
+    width: $component-width - 18px;
   }
 
   input {
     line-height: 24px;
-    padding: 8px;
+    padding: $default-spacing;
   }
 }
