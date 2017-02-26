@@ -1,6 +1,6 @@
 <template>
 
-  <div class="chat-area" ref="chatArea" scrollheight.bind="scrollChatArea()">
+  <div class="chat-area" ref="chatArea">
     <ul>
       <li repeat.for="expression of expressions" class="${expression.type}">
         <div class="message" innerhtml.bind="expression.text"></div>
